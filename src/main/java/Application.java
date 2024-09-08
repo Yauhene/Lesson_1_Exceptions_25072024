@@ -8,21 +8,29 @@ public class Application {
 
 //        System.out.println(divide(30, 10));
 
-
+        System.out.println(divide(10, 0));
     }
 
     public static void a() {
-
+        b();
     }
 
     public static void b() {
-
+        c();
     }
 
     public static void c() {
         int ints[] = new int[10];
         System.out.println(ints[1000]);
     }
+
+        public static int divide(int a1, int a2) {
+        if (a2 == 0) {
+           throw new RuntimeException("Divide by zero not permited");
+        }
+        return a1/a2;
+    }
+
 // ==  Пример полной лажи, работать будет, но может вернуть -1 и как результат, и как код ошибки
 //    public static int divide(int a1, int a2) {
 //        if (a2 == 0) {
